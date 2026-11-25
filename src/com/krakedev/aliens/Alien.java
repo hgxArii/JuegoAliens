@@ -47,6 +47,47 @@ public class Alien {
     public int getNumeroPies() {
         return numeroPies;
     }
+
+    // Método para agregar brazos
+    public boolean agregarBrazos(int cantidad) {
+
+        // Verificar que la cantidad sea válida
+        // y que no supere las 10 extremidades.
+
+        if (cantidad <= 0 || numeroBrazos + numeroPies + cantidad > 10) {
+
+            return false;
+
+        } else {
+
+            numeroBrazos = numeroBrazos + cantidad;
+
+            return true;
+
+        }
+
+    }
+
+    // Método para agregar piernas
+    public boolean agregarPiernas(int cantidad) {
+
+        // Verificar que la cantidad sea válida
+        // y que no supere las 10 extremidades.
+
+        if (cantidad <= 0 || numeroBrazos + numeroPies + cantidad > 10) {
+
+            return false;
+
+        } else {
+
+            numeroPies = numeroPies + cantidad;
+
+            return true;
+
+        }
+
+    }
+
     public double getPrecioExtremidad() {
         return precioExtremidad;
     }
