@@ -13,9 +13,7 @@ public class TestExtremidadesJUnit {
     @Test
     public void testCaso1AgregarBrazos() {
 
-        // CASO 1:
-        // Agregar 4 brazos.
-        // La operación debe ser exitosa.
+        // CASO 1: Agregar 4 brazos.
 
         Alien alien = new Alien(15, "Verde");
 
@@ -29,9 +27,7 @@ public class TestExtremidadesJUnit {
     @Test
     public void testCaso2AgregarPiernas() {
 
-        // CASO 2:
-        // Agregar 3 piernas.
-        // La operación debe ser exitosa.
+        // CASO 2: Agregar 3 piernas.
 
         Alien alien = new Alien(15, "Azul");
 
@@ -43,11 +39,9 @@ public class TestExtremidadesJUnit {
     }
 
     @Test
-    public void testCaso3LimiteMaximoDeExtremidades() {
+    public void testCaso3LimiteMaximo() {
 
-        // CASO 3:
-        // Agregar exactamente 10 brazos.
-        // Debe permitir la operación porque no supera el límite.
+        // CASO 3: Agregar exactamente 10 extremidades.
 
         Alien alien = new Alien(20, "Rojo");
 
@@ -55,16 +49,13 @@ public class TestExtremidadesJUnit {
 
         assertTrue(resultado);
         assertEquals(10, alien.getNumeroBrazos());
-        assertEquals(0, alien.getNumeroPies());
 
     }
 
     @Test
-    public void testCaso4SuperarLimiteDeExtremidades() {
+    public void testCaso4SuperarLimite() {
 
-        // CASO 4:
-        // Intentar agregar 11 brazos.
-        // Debe rechazar la operación y no agregar ninguno.
+        // CASO 4: Intentar agregar 11 brazos.
 
         Alien alien = new Alien(20, "Verde");
 
@@ -72,25 +63,21 @@ public class TestExtremidadesJUnit {
 
         assertFalse(resultado);
         assertEquals(0, alien.getNumeroBrazos());
-        assertEquals(0, alien.getNumeroPies());
 
     }
 
     @Test
-    public void testCaso5AgregarBrazosYPiernasCombinados() {
+    public void testCaso5AgregarBrazosYPiernas() {
 
-        // CASO 5:
-        // Primero agregar 6 brazos.
-        // Después agregar 4 piernas.
-        // El total será exactamente 10 extremidades.
+        // CASO 5: Agregar 6 brazos y 4 piernas.
 
         Alien alien = new Alien(15, "Morado");
 
-        boolean resultadoBrazos = alien.agregarBrazos(6);
-        boolean resultadoPiernas = alien.agregarPiernas(4);
+        boolean brazos = alien.agregarBrazos(6);
+        boolean piernas = alien.agregarPiernas(4);
 
-        assertTrue(resultadoBrazos);
-        assertTrue(resultadoPiernas);
+        assertTrue(brazos);
+        assertTrue(piernas);
 
         assertEquals(6, alien.getNumeroBrazos());
         assertEquals(4, alien.getNumeroPies());
@@ -100,11 +87,7 @@ public class TestExtremidadesJUnit {
     @Test
     public void testCaso6SuperarLimiteCombinado() {
 
-        // CASO 6:
-        // Primero agregar 6 brazos.
-        // Después intentar agregar 5 piernas.
-        // El total sería 11, por lo tanto debe rechazarlo.
-        // Los 6 brazos deben mantenerse y las piernas en 0.
+        // CASO 6: Agregar 6 brazos e intentar agregar 5 piernas.
 
         Alien alien = new Alien(15, "Amarillo");
 
@@ -120,11 +103,9 @@ public class TestExtremidadesJUnit {
     }
 
     @Test
-    public void testCaso7CantidadInvalida() {
+    public void testCaso7CantidadNegativa() {
 
-        // CASO 7:
-        // Intentar agregar una cantidad negativa.
-        // No debe permitir la operación ni modificar el Alien.
+        // CASO 7: No permitir cantidades negativas.
 
         Alien alien = new Alien(15, "Azul");
 

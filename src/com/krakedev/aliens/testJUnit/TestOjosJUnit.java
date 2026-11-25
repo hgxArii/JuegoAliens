@@ -11,11 +11,9 @@ import com.krakedev.aliens.Alien;
 public class TestOjosJUnit {
 
     @Test
-    public void testCaso1AgregarOjosAlienPequeno() {
+    public void testCaso1AlienPequeno() {
 
-        // CASO 1:
-        // Alien de 8 cm.
-        // Puede tener máximo 3 ojos.
+        // CASO 1: Alien de 8 cm, máximo 3 ojos.
 
         Alien alien = new Alien(8, "Verde");
 
@@ -27,12 +25,9 @@ public class TestOjosJUnit {
     }
 
     @Test
-    public void testCaso2SuperarLimiteAlienPequeno() {
+    public void testCaso2SuperarLimitePequeno() {
 
-        // CASO 2:
-        // Alien de 8 cm.
-        // Intentar agregar 4 ojos.
-        // Debe rechazar la operación.
+        // CASO 2: Intentar agregar 4 ojos.
 
         Alien alien = new Alien(8, "Azul");
 
@@ -44,11 +39,9 @@ public class TestOjosJUnit {
     }
 
     @Test
-    public void testCaso3AgregarOjosAlienMediano() {
+    public void testCaso3AlienMediano() {
 
-        // CASO 3:
-        // Alien de 15 cm.
-        // Puede tener máximo 5 ojos.
+        // CASO 3: Alien de 15 cm, máximo 5 ojos.
 
         Alien alien = new Alien(15, "Rojo");
 
@@ -60,12 +53,9 @@ public class TestOjosJUnit {
     }
 
     @Test
-    public void testCaso4SuperarLimiteAlienMediano() {
+    public void testCaso4SuperarLimiteMediano() {
 
-        // CASO 4:
-        // Alien de 15 cm.
-        // Intentar agregar 6 ojos.
-        // Debe rechazar la operación.
+        // CASO 4: Intentar agregar 6 ojos.
 
         Alien alien = new Alien(15, "Morado");
 
@@ -77,11 +67,9 @@ public class TestOjosJUnit {
     }
 
     @Test
-    public void testCaso5AgregarOjosAlienGrande() {
+    public void testCaso5AlienGrande() {
 
-        // CASO 5:
-        // Alien de 25 cm.
-        // Puede tener máximo 7 ojos.
+        // CASO 5: Alien de 25 cm, máximo 7 ojos.
 
         Alien alien = new Alien(25, "Amarillo");
 
@@ -93,12 +81,9 @@ public class TestOjosJUnit {
     }
 
     @Test
-    public void testCaso6SuperarLimiteAlienGrande() {
+    public void testCaso6SuperarLimiteGrande() {
 
-        // CASO 6:
-        // Alien de 25 cm.
-        // Intentar agregar 8 ojos.
-        // Debe rechazar la operación.
+        // CASO 6: Intentar agregar 8 ojos.
 
         Alien alien = new Alien(25, "Negro");
 
@@ -112,11 +97,7 @@ public class TestOjosJUnit {
     @Test
     public void testCaso7AgregarOjosPorPartes() {
 
-        // CASO 7:
-        // Alien de 15 cm.
-        // Primero agregar 2 ojos.
-        // Después agregar otros 3.
-        // El total será exactamente 5 ojos.
+        // CASO 7: Agregar 2 ojos y después otros 3.
 
         Alien alien = new Alien(15, "Verde");
 
@@ -133,12 +114,7 @@ public class TestOjosJUnit {
     @Test
     public void testCaso8SuperarLimitePorPartes() {
 
-        // CASO 8:
-        // Alien de 15 cm.
-        // Primero agregar 3 ojos.
-        // Después intentar agregar otros 3.
-        // El total sería 6 y el máximo permitido es 5.
-        // Debe conservar los 3 ojos anteriores.
+        // CASO 8: Agregar 3 ojos e intentar agregar otros 3.
 
         Alien alien = new Alien(15, "Azul");
 

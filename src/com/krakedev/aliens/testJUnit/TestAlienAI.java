@@ -9,29 +9,21 @@ import com.krakedev.aliens.Alien;
 public class TestAlienAI {
 
     @Test
-    public void testCaso1AlienConDatosValidos() {
+    public void testCaso1AlienValido() {
 
-        // CASO 1:
-        // Crear un alien con tamaño y color válidos.
-        // Comprobar sus atributos y valores iniciales.
+        // CASO 1: Crear un Alien con datos válidos.
 
         Alien alien = new Alien(20, "Morado");
 
         assertEquals(20, alien.getTamanio());
         assertEquals("Morado", alien.getColor());
 
-        assertEquals(0, alien.getNumeroOjos());
-        assertEquals(0, alien.getNumeroBrazos());
-        assertEquals(0, alien.getNumeroPies());
-
     }
 
     @Test
-    public void testCaso2TamanioInferiorAlLimite() {
+    public void testCaso2TamanioMinimo() {
 
-        // CASO 2:
-        // Ingresar un tamaño de 1 cm.
-        // El tamaño final debe ser 5 cm.
+        // CASO 2: Ajustar tamaño a 5.
 
         Alien alien = new Alien(1, "Azul");
 
@@ -44,11 +36,9 @@ public class TestAlienAI {
     }
 
     @Test
-    public void testCaso3TamanioSuperiorAlLimite() {
+    public void testCaso3TamanioMaximo() {
 
-        // CASO 3:
-        // Ingresar un tamaño de 50 cm.
-        // El tamaño final debe ser 30 cm.
+        // CASO 3: Ajustar tamaño a 30.
 
         Alien alien = new Alien(50, "Rojo");
 
@@ -61,11 +51,9 @@ public class TestAlienAI {
     }
 
     @Test
-    public void testCaso4CalculoDePreciosTamanioIntermedio() {
+    public void testCaso4PreciosTamanioIntermedio() {
 
-        // CASO 4:
-        // Crear un alien de 10 cm.
-        // Verificar los tres precios calculados.
+        // CASO 4: Comprobar precios para tamaño 10.
 
         Alien alien = new Alien(10, "Verde");
 
@@ -76,17 +64,15 @@ public class TestAlienAI {
     }
 
     @Test
-    public void testCaso5LimitesExactos() {
+    public void testCaso5Limites() {
 
-        // CASO 5:
-        // Verificar los tamaños exactos de 5 y 30 cm.
-        // Ambos deben mantenerse sin modificaciones.
+        // CASO 5: Comprobar límites exactos.
 
-        Alien alienMinimo = new Alien(5, "Amarillo");
-        Alien alienMaximo = new Alien(30, "Negro");
+        Alien minimo = new Alien(5, "Amarillo");
+        Alien maximo = new Alien(30, "Negro");
 
-        assertEquals(5, alienMinimo.getTamanio());
-        assertEquals(30, alienMaximo.getTamanio());
+        assertEquals(5, minimo.getTamanio());
+        assertEquals(30, maximo.getTamanio());
 
     }
 

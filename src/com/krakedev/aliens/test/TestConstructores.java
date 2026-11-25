@@ -6,30 +6,25 @@ public class TestConstructores {
 
     public static void main(String[] args) {
 
-        // CASO 1:
-        // Crear un alien con tamaño válido de 15 cm.
+        // CASO 1: Alien con tamaño válido
 
         Alien alien1 = new Alien(15, "Verde");
 
-        System.out.println("----- ALIEN 1 -----");
+        System.out.println("----- CASO 1 -----");
         alien1.imprimir();
 
-        // CASO 2:
-        // Crear un alien con tamaño menor al mínimo.
-        // El tamaño debe ajustarse automáticamente a 5 cm.
+        // CASO 2: Tamaño menor al mínimo
 
         Alien alien2 = new Alien(3, "Azul");
 
-        System.out.println("----- ALIEN 2 -----");
+        System.out.println("----- CASO 2 -----");
         alien2.imprimir();
 
-        // CASO 3:
-        // Crear un alien con tamaño mayor al máximo.
-        // El tamaño debe ajustarse automáticamente a 30 cm.
+        // CASO 3: Tamaño mayor al máximo
 
         Alien alien3 = new Alien(35, "Rojo");
 
-        System.out.println("----- ALIEN 3 -----");
+        System.out.println("----- CASO 3 -----");
         alien3.imprimir();
 
     }

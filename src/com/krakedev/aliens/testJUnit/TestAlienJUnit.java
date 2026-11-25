@@ -11,9 +11,7 @@ public class TestAlienJUnit {
     @Test
     public void testCaso1AsignacionAtributos() {
 
-        // CASO 1:
-        // Validar que el constructor asigne correctamente
-        // el tamaño, color y los valores iniciales.
+        // CASO 1: Validar los atributos iniciales.
 
         Alien alien = new Alien(15, "Verde");
 
@@ -29,9 +27,7 @@ public class TestAlienJUnit {
     @Test
     public void testCaso2TamanioMenorAlMinimo() {
 
-        // CASO 2:
-        // Si el tamaño es menor a 5 cm,
-        // debe ajustarse automáticamente a 5 cm.
+        // CASO 2: El tamaño debe ajustarse a 5.
 
         Alien alien = new Alien(3, "Azul");
 
@@ -42,9 +38,7 @@ public class TestAlienJUnit {
     @Test
     public void testCaso3TamanioMayorAlMaximo() {
 
-        // CASO 3:
-        // Si el tamaño supera los 30 cm,
-        // debe ajustarse automáticamente a 30 cm.
+        // CASO 3: El tamaño debe ajustarse a 30.
 
         Alien alien = new Alien(35, "Rojo");
 
@@ -53,11 +47,9 @@ public class TestAlienJUnit {
     }
 
     @Test
-    public void testCaso4TamanioMinimoYMaximo() {
+    public void testCaso4LimitesExactos() {
 
-        // CASO 4:
-        // Validar que se acepten correctamente
-        // los límites exactos de 5 y 30 cm.
+        // CASO 4: Validar los límites de 5 y 30.
 
         Alien alienMinimo = new Alien(5, "Verde");
         Alien alienMaximo = new Alien(30, "Azul");
@@ -68,13 +60,9 @@ public class TestAlienJUnit {
     }
 
     @Test
-    public void testCaso5CalculoDePrecios() {
+    public void testCaso5CalculoPrecios() {
 
-        // CASO 5:
-        // Para un alien de 15 cm:
-        // Cuerpo = 3.00
-        // Extremidad = 1.50
-        // Ojo = 0.75
+        // CASO 5: Comprobar los precios para tamaño 15.
 
         Alien alien = new Alien(15, "Verde");
 
